@@ -12,8 +12,13 @@ class MealItem extends StatelessWidget {
   String get complexityText {
     return meal.complexity.name[0].toUpperCase() +
         meal.complexity.name.substring(1);
+    return meal.complexity.name[0].toUpperCase() +
+        meal.complexity.name.substring(1);
   }
 
+  String get affordabilityText {
+    return meal.affordability.name[0].toUpperCase() +
+        meal.affordability.name.substring(1);
   String get affordabilityText {
     return meal.affordability.name[0].toUpperCase() +
         meal.affordability.name.substring(1);
@@ -29,6 +34,9 @@ class MealItem extends StatelessWidget {
       clipBehavior: Clip.hardEdge,
       elevation: 2,
       child: InkWell(
+        onTap: () {
+          onSelectMeal(meal);
+        },
         onTap: () {
           onSelectMeal(meal);
         },
@@ -80,6 +88,7 @@ class MealItem extends StatelessWidget {
                           icon: Icons.work,
                           label: complexityText,
                         ),
+                        const SizedBox(
                         const SizedBox(
                           width: 12,
                         ),
