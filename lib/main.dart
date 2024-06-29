@@ -8,7 +8,7 @@ final theme = ThemeData(
     brightness: Brightness.light,
     seedColor: const Color.fromARGB(255, 244, 244, 184),
   ),
-  scaffoldBackgroundColor: Color.fromARGB(255, 244, 244, 184),
+  scaffoldBackgroundColor:const Color.fromARGB(255, 244, 244, 184),
   textTheme: GoogleFonts.latoTextTheme(),
   appBarTheme: const AppBarTheme(
     backgroundColor: Color.fromARGB(255, 244, 244, 184),
